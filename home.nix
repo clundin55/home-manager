@@ -16,6 +16,7 @@
     pkgs.tmux
     pkgs.ruby
     pkgs.neovim
+    pkgs.alacritty
     (pkgs.writeShellScriptBin "install-scm-breeze" ''
         git clone https://github.com/scmbreeze/scm_breeze.git ~/.scm_breeze
         ~/.scm_breeze/install.sh
@@ -26,6 +27,10 @@
     ".zshrc".source = dotfiles/zshrc;
     ".tmux.conf".source = dotfiles/tmuxconf;
     ".config/nvim/init.lua".source = dotfiles/nvimlua;
+    ".config/alacritty/alacritty.toml".source = dotfiles/alacrittytoml;
+    ".config/alacritty/darcula.toml".source = dotfiles/darculatoml;
+    ".config/alacritty/paper.toml".source = dotfiles/papertoml;
+    ".inputrc".source = dotfiles/inputrc;
   };
 
   home.sessionVariables = {
