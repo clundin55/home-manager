@@ -17,6 +17,16 @@
     pkgs.ruby
     pkgs.neovim
     pkgs.alacritty
+    pkgs.ripgrep
+    pkgs.fzf
+    pkgs.jq
+    pkgs.gh # GitHub CLI
+    pkgs.htop
+    pkgs.fd
+    pkgs.difftastic # binary is difft
+    pkgs.tealdeer
+    pkgs.pass
+    pkgs.tree
     (pkgs.writeShellScriptBin "install-scm-breeze" ''
         git clone https://github.com/scmbreeze/scm_breeze.git ~/.scm_breeze
         ~/.scm_breeze/install.sh
