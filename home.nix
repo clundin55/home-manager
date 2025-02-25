@@ -3,9 +3,7 @@
 {
   home.username = "carl";
   home.homeDirectory = "/home/carl";
-
   home.stateVersion = "24.11";
-
 
   programs.zsh.enable = true;
   home.shell.enableZshIntegration = true;
@@ -35,12 +33,16 @@
 
   home.file = {
     ".zshrc".source = dotfiles/zshrc;
+    ".inputrc".source = dotfiles/inputrc;
     ".tmux.conf".source = dotfiles/tmuxconf;
     ".config/nvim/init.lua".source = dotfiles/nvimlua;
     ".config/alacritty/alacritty.toml".source = dotfiles/alacrittytoml;
     ".config/alacritty/darcula.toml".source = dotfiles/darculatoml;
     ".config/alacritty/paper.toml".source = dotfiles/papertoml;
-    ".inputrc".source = dotfiles/inputrc;
+    ".config/hypr/hyprland.conf".source = dotfiles/hyprlandconf;
+    ".config/hypr/hyprpaper.conf".source = dotfiles/hyprpaperconf;
+    ".config/waybar/config".source = dotfiles/waybarconf;
+    ".config/waybar/style.css".source = dotfiles/waybarstyle;
   };
 
   home.sessionVariables = {
