@@ -3,7 +3,7 @@
 {
   home.username = "carl";
   home.homeDirectory = "/home/carl";
-  home.stateVersion = "24.11";
+  home.language.base = "en_US.UTF-8";
 
   programs.zsh.enable = true;
   home.shell.enableZshIntegration = true;
@@ -48,13 +48,15 @@
   home.sessionVariables = {
       USING_HOME_MANAGER = "true";
       EDITOR = "nvim";
+      GIT_EXTERNAL_DIFF = "difft";
   };
-
-  programs.home-manager.enable = true;
 
   programs.git = {
     enable = true;
     userName = "Carl Lundin";
     userEmail = "carllundin55@gmail.com";
   };
+
+  programs.home-manager.enable = true;
+  home.stateVersion = "24.11";
 }
