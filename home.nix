@@ -9,12 +9,10 @@
   home.shell.enableZshIntegration = true;
 
   home.packages = [
-    pkgs.git
+    pkgs.alacritty
     pkgs.zsh
     pkgs.tmux
-    pkgs.ruby
     pkgs.neovim
-    pkgs.alacritty
     pkgs.ripgrep
     pkgs.fzf
     pkgs.jq
@@ -25,10 +23,7 @@
     pkgs.tealdeer
     pkgs.pass
     pkgs.tree
-    (pkgs.writeShellScriptBin "install-scm-breeze" ''
-        git clone https://github.com/scmbreeze/scm_breeze.git ~/.scm_breeze
-        ~/.scm_breeze/install.sh
-    '')
+    pkgs.scmpuff
   ];
 
   home.file = {
@@ -55,6 +50,18 @@
     enable = true;
     userName = "Carl Lundin";
     userEmail = "carllundin55@gmail.com";
+    aliases = {
+      "b" = "branch";
+      "co" = "checkout";
+      "c" = "commit";
+      "r" = "remote";
+      "d" = "diff";
+      "sw" = "switch";
+      "rs" = "reset";
+      "l" = "log";
+      "st" = "stash";
+      "ps" = "push";
+    };
   };
 
   programs.home-manager.enable = true;
