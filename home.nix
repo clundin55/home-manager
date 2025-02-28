@@ -24,6 +24,8 @@
     pkgs.pass
     pkgs.tree
     pkgs.scmpuff
+    pkgs.go
+    pkgs.gopls
   ];
 
   home.file = {

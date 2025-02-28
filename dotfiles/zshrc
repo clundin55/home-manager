@@ -35,6 +35,17 @@ alias rzsh="source ~/.zshrc"
 alias fls="ls | fzf"
 alias bmv="bulk-renamer"
 
+alias gr="git r"
+alias grs="git rs"
+alias gb="git b"
+alias gco="git co"
+alias gc="git c"
+alias gd="git d"
+alias gsw="git sw"
+alias gl="git l"
+alias gst="git st"
+alias gps="git ps"
+
 function lightterm() {
     if [[ $OSTYPE == 'darwin'* ]]; then
         sed -i '' '1s/".*"/"~\/.config\/alacritty\/paper.toml"/' ~/.config/alacritty/alacritty.toml
