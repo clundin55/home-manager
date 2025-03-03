@@ -205,6 +205,7 @@ bind = $mainMod, V, togglefloating,
 bind = $mainMod, R, exec, $menu
 bind = $mainMod, P, pseudo, # dwendle
 #bind = $mainMod, J, togglesplit, # dwindle
+bind = $mainMod Control_L, Q, exec, hyprlock
 
 # Move focus with mainMod + arrow keys
 bind = $mainMod, H, movefocus, l
@@ -285,3 +286,5 @@ windowrulev2 = suppressevent maximize, class:.*
 
 # Fix some dragging issues with XWayland
 windowrulev2 = nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0
+
+exec-once = hyprpaper
