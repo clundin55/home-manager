@@ -104,7 +104,7 @@ require'nvim-treesitter.configs'.setup {
 -- vim.opt.foldmethod = "expr"
 -- vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 
-vim.cmd[[colorscheme tokyonight]]
+vim.cmd[[colorscheme tokyonight-night]]
 
 -- Nvim Tree Mappings
 vim.api.nvim_set_keymap('n', '<leader>o', ':NvimTreeToggle<cr>', {noremap=true})
@@ -138,7 +138,16 @@ vim.api.nvim_set_keymap('n', '<leader>vh', ':e ~/.config/hypr/hyprland.conf<cr>'
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
 local nvim_lsp = require('lspconfig')
-local configs = require('lspconfig.configs')
+
+local servers = { 'gopls', 'rust_analyzer' }
+for _, lsp in ipairs(servers) do
+  nvim_lsp[lsp].setup {
+    on_attach = on_attach,
+    flags = {
+      debounce_text_changes = 150,
+    }
+  }
+end
 
 vim.lsp.inlay_hint.enable(true)
 
