@@ -35,7 +35,7 @@ alias rzsh="source ~/.zshrc"
 alias fls="ls | fzf"
 alias bmv="bulk-renamer"
 
-alias gr="git r"
+alias gr="git r -v"
 alias grs="git rs"
 alias gb="git b"
 alias gco="git co"
@@ -45,6 +45,9 @@ alias gsw="git sw"
 alias gl="git l"
 alias gst="git st"
 alias gps="git ps"
+alias gpsf="git ps --force-with-lease"
+alias gf="git fetch"
+alias grb="git rebase"
 
 function lightterm() {
     if [[ $OSTYPE == 'darwin'* ]]; then
@@ -86,7 +89,7 @@ setopt HIST_SAVE_NO_DUPS         # Don't write duplicate entries in the history 
 setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording entry.
 setopt HIST_VERIFY               # Don't execute immediately upon history expansion.
 setopt HIST_BEEP                 # Beep when accessing nonexistent history.
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 eval "$(scmpuff init -s)"
 
